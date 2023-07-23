@@ -1,0 +1,220 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+}
+
+a {
+    text-decoration: none;
+
+}
+
+li {
+    list-style: none;
+}
+
+img {
+    width: 100%;
+}
+
+.section_nav {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding-top: 30PX;
+    height: 100px;
+    align-items: center;
+}
+
+.style {
+    display: flex;
+    justify-content: space-around;
+    gap: 2.5rem;
+}
+
+.logo_nav {
+
+
+    color: rgb(221, 199, 0);
+    font-size: 1.5rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+}
+
+.logo {
+    color: rgb(35, 31, 255);
+    font-weight: 700;
+}
+
+.section_nav nav li a {
+    font-size: 1rem;
+    font-weight: 5000;
+    color: black;
+    padding: 0.5rem, 1rem;
+    transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+
+}
+
+.section_nav nav li a:hover {
+
+    color: rgb(35, 31, 255);
+}
+
+.section_nav nav li a.active {
+    background-color: #5c48ee;
+    color: white;
+    border-radius: 5px;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+.section_nav nav li a.active:hover {
+    cursor: pointer;
+    background-color: darkblue;
+}
+
+.right_content_header {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    place-content: center;
+    
+}
+
+.right_content_header img {
+    max-width: 700px;
+    border-radius: 10px;
+    max-height: 266px;
+
+}
+
+.right_content_header img:nth-child(2) {
+    transform: translateY(-70px);
+}
+
+.section_content_header {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 1200px;
+    margin: auto;
+    gap: 5rem;
+    min-height: 80vh;
+    padding-top: 67px;
+}
+
+.Left_content_header {
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+    margin-top: 20px;
+    align-items: center;
+    justify-content: center;    
+}
+
+.Left_content_header h1 {
+    width: 100%;
+    font-size: 3rem;
+    line-height: 3.5rem;
+}
+
+.Left_content_header h1 span:nth-child(1) {
+    font-weight: 400;
+    color: #0f1e6a;
+}
+
+.span2 {
+    font-weight: 500;
+    color: #00eb3b;
+}
+
+.Left_content_header h1 span:nth-child(3) {
+    font-weight: 7;
+    color: #f8a116;
+
+}
+
+.Left_content_header p{
+    margin: 1rem 0 1.5rem 0;
+    color: #333333;
+}
+
+.Left_content_header form {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.Left_content_header form input {
+    border: none;
+    background-color: #fff;
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
+    padding: 1rem;
+    font-size: 0.8rem;
+    max-width: 300px;
+    width: 100%;
+    outline: 0;
+}
+
+.Left_content_header form button {
+    border: none;
+    background-color: #5c48f2;
+    color: #fff;
+    padding: 1rem;
+    white-space: nowrap;
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
+
+}
+
+.right_content_header .content_img_text{
+   background: linear-gradient(to right,rgba(92,72,238,0.6), rgba(15,30,106,0.4));
+   backdrop-filter:blur(30px);
+    color: #fff;
+    padding: 1rem 2rem;
+    width: 100%;
+    max-width: 310px;
+    position: absolute;
+    top: 79%;
+    left: 69%;
+    transform: translate(-27%, -113%);
+    border-radius: 10px;
+}
+.right_content_header .content_img_text ul li{
+    margin-bottom: 0.5rem;
+    list-style:circle;
+ }
+ @media screen  and (max-width:999px){
+    .section_nav nav{
+        display:list-item;
+    }
+    .section_nav nav li{
+        width: 100%;
+        max-width: 200px;
+        padding-top: 1px;
+        padding-bottom: 1px;
+    }
+    .section_content_header{
+        grid-template-columns: repeat(1,1fr);
+    }
+    .Left_content_header{
+        text-align: center;
+    }
+    .Left_content_header form{
+        justify-content: center;
+    }
+    .right_content_header img:nth-child(2){
+        transform: translateY(0);
+    }
+ }
