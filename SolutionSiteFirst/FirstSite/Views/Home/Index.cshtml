@@ -1,8 +1,9 @@
-﻿@{
+﻿@model IndexModel
+@{
     ViewData["Title"] = "Home Page";
 }
 
-<div class="section_nav">
+<div class="section_nav" >
 
     <div class="logo_nav">
         <a href="#" class="logo">
@@ -17,7 +18,7 @@
             <a asp-action="Contact" asp-controller="Home">About As</a>
         </li>
         <li>
-            <a href="#">ServieCes</a>
+            <a href="#">Servieces</a>
         </li>
         <li>
             <a href="#">Courses</a>
@@ -72,3 +73,15 @@
         </div>
     </div>
 </div>
+
+@await Html.PartialAsync("Projects",new List<Project>());
+
+
+<div class="container">
+    <hr/>
+</div>
+
+
+<section class="footer">
+    <p>lorem10</p>
+</section>
