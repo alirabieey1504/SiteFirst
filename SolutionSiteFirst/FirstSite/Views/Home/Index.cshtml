@@ -1,79 +1,12 @@
-﻿@model IndexModel
+﻿
 @{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "صفحه اصلی";
 }
 
-<div class="section_nav" >
-
-    <div class="logo_nav">
-        <a href="#" class="logo">
-            Learning
-        </a>
-    </div>
-    <nav class="style">
-        <li>
-            <a href="#">Home</a>
-        </li>
-        <li>
-            <a asp-action="Contact" asp-controller="Home">About As</a>
-        </li>
-        <li>
-            <a href="#">Servieces</a>
-        </li>
-        <li>
-            <a href="#">Courses</a>
-        </li>
-        <li>
-            <a href="#">Blog</a>
-        </li>
-        <li>
-            <a href="#" class="active">Register</a>
-        </li>
-    </nav>
 
 
-</div>
-<div class="section_content_header">
-    <div class="Left_content_header">
-        <h1>
-            <span>
-                Best Learning
-            </span>
-            <br>
-            <span>
-                Education platform
-            </span>
-            <br>
-            <span class="span2">
-                in the word
-            </span>
-            <br>
-        </h1>
-        <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla,
-            earum? Quis possimus quas magni nemo obcaecati aperiam perferendis numquam exercitationem ipsa
-            doloribus ab eius consectetur inventore tempora porro necessitatibus error, consequatur repellendus,
-            qui atque, aut dolore quisquam. Alias, rem magnam!
-        </p>
-        <form action>
-            <input type="text" placeholder="what do you want to learn">
-            <button>search cuorse</button>
-        </form>
-    </div>
-    <div class="right_content_header">
-        <img src="~/imag/img1.jpg" alt="" style="max-width: 300px;">
-        <img src="~/imag/img2.jpg" alt="" style="max-width: 300px;">
-        <div class="content_img_text">
-            <ul>
-                <Li>
-                    expert teachers
-                </Li>
-                <Li>Get 30% off every last mounth</Li>
-            </ul>
-        </div>
-    </div>
-</div>
 
+@await Html.PartialAsync("Header");
 @*@await Html.PartialAsync("Projects",new List<Project>());*@
 
 @await Component.InvokeAsync("Projects")
@@ -85,8 +18,5 @@
 @await Component.InvokeAsync("Articles")
 
 
+@await Html.PartialAsync("Footer");
 
-
-<footer class="footer text-center py-4">
-    <p> موسسه خدماتی تجاری خادم الرضا (ع)</p>
-</footer>
