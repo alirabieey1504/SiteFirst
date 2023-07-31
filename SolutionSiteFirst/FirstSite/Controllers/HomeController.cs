@@ -1,6 +1,10 @@
-﻿using FirstSite.Models;
+﻿using System;
+using System.ComponentModel.DataAnnotations;
+using FirstSite.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
+using System.Text.Encodings.Web;
+using Microsoft.AspNetCore.Http;
 
 namespace FirstSite.Controllers
 {
@@ -17,12 +21,30 @@ namespace FirstSite.Controllers
         {
             return View();
         }
-
+        [HttpGet]
         public IActionResult Contact()
         {
-            return View();
+            var model=new ContactModel();
+            return View(model);
+
+          
         }
 
+      //  [HttpPost]
+        //public JsonResult Contact(IFormCollection form)
+        //{
+        //    var email = form["email"];
+
+        //    return Json(Ok());
+        //}
+
+
+        [HttpPost]
+        public JsonResult Contact(ContactModel form)
+        {
+            Console.WriteLine(form.ToString());
+            return Json(Ok());
+        }
       
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
