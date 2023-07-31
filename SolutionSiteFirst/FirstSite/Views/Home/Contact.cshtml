@@ -6,11 +6,27 @@
 <button style="margin-bottom: 30px;margin-left: 50px;margin-top: 30px;">
     <a asp-action="Index" asp-controller="Home">صفحه اصلی</a>
 </button>
-<form asp-action="Contact" metod="post" >
+<form asp-action="Contact" metod="post">
+   @if (!string.IsNullOrWhiteSpace(ViewBag.success))
+   {
+       <div class="alert-success ">
+           <p>@ViewBag.success</p>
+       </div>
+   }
+   else
+   {
+       <div class="alert-danger">
+           <p>@ViewBag.error</p>
+       </div>
+   }
+   
+  
+    
     <fieldset>
         <label asp-for="Email">ایمیل خود را وارد کنید </label>
         <input type="email" asp-for="Email" placeholder="for example Alirabieey@gmail.com" style="margin-left: 94px"><br><br>
         <span asp-validation-for="Email" class="text-danger"></span><br/><br/>
+
         <label asp-for="Tell">شماره تماس :</label>
         <input type="tel" asp-for="Tell" placeholder="0921999999" style="margin-left: 141px;"><br><br>
         <label asp-for="Password">رمز عبور خود را وارد کنید:</label>

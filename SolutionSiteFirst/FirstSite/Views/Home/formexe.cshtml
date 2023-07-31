@@ -1,0 +1,92 @@
+﻿@model FormKeyModel
+@{
+    ViewData["Title"] = "فرم ثبت خرید محصول";
+}
+
+<style>
+
+        #form {
+            border-radius: 50px;
+            box-shadow: 15px 15px 15px 0px rgb(112, 108, 106);
+            background-color: coral;
+            color: rgb(22, 99, 233);
+            margin-right: 500px;
+            margin-top: 200px;
+            margin-left: 500px;
+        }
+
+        .ghashangi {
+            padding-right: 150px;
+            padding-top: 70px;
+            padding-bottom: 70px;
+        }
+
+        .body { background-color: rgb(131, 251, 255); }
+    </style>
+
+<body style="direction: rtl;" class="body">
+
+
+<form method="post" asp-action="formexe">
+    @if (!string.IsNullOrWhiteSpace(ViewBag.success))
+    {
+        <div class="alert-success">
+            <p>@ViewBag.success</p>
+        </div>
+    }
+    else
+    {
+        <div class="alert-danger">
+            <p>@ViewBag.error</p>
+        </div>
+    }
+    <fieldset class="ghashangi">
+
+        <legend>personal</legend>
+        <label asp-for="Name">نام :</label>
+        <input type="text" asp-for="Name" placeholder="for example ali" style="margin-right: 60px;"><br><br>
+        <span asp-validation-for="Name" class="alert-danger"></span><br/>
+        <label asp-for="Family">نام خانوادگی :</label>
+        <input type="text" asp-for="Family" placeholder="for example rabiee" style="margin-right: 10px;"><br><br>
+        <span asp-validation-for="Family" class="alert-danger"></span><br/>
+
+        <label asp-for="Kodmeli">کد ملی :</label>
+        <input type="tel" asp-for="Kodmeli" style="margin-right: 40px"><br><br>
+        <span asp-validation-for="Kodmeli" class="alert-danger"></span><br/>
+        <label asp-for="Email">ایمیل :</label>
+        <input type="Email" asp-for="Email" style="margin-right: 50px;" placeholder="alirabieey@gmail.com"><br><br>
+        <span asp-validation-for="Email" class="alert-danger"></span><br/>
+        <label for="tavalod">تولد :</label>
+        <select id="tavalod" style="margin-right: 55px;">
+            <option value="tehran">تهران</option>
+            <option value="arak">اراک</option>
+            <option value="mashhad">مشهد</option>
+            <option value="mazandaran">مازندران</option>
+            <option value="zabol">زابل</option>
+            <option value="rasht">رشت</option>
+            <option value="esfahan">اصفهان</option>
+
+
+        </select><br>
+        <label for="vaz">وضعیت جسمی :</label>
+        <label for="salem">سالم</label>
+        <input type="radio" id="salem" name="salem" value="salem" checked="checked ">
+        <label for="nasalem">نا سالم</label>
+        <input type="radio" id="salem" name="salem" dir="lrt" value><br></br>
+
+        <label for="ghalbi">قلبی :</label>
+        <input type="checkbox" id="ghalbi" name="ghalbi">
+
+        <label for="ghalbi">تنفسی :</label>
+        <input type="checkbox" id="ghalbi" name="ghalbi">
+
+        <label for="ghalbi">کلیه :</label>
+        <input type="checkbox" id="ghalbi" name="ghalbi">
+
+        <label for="ghalbi">سایر :</label>
+        <input type="checkbox" id="ghalbi" name="ghalbi"><br><br>
+        <button type="submit" class="alert-success py-2 " style="color: darkgreen">تایید</button>
+
+    </fieldset>
+</form>
+</body>

@@ -118,3 +118,4 @@ D:\Test\SiteFirst\SolutionSiteFirst\FirstSite\obj\Debug\net5.0\Razor\Views\Home\
 D:\Test\SiteFirst\SolutionSiteFirst\FirstSite\obj\Debug\net5.0\Razor\Views\Home\Components\Articles\_Articles.cshtml.g.cs
 D:\Test\SiteFirst\SolutionSiteFirst\FirstSite\obj\Debug\net5.0\Razor\Views\Shared\Header.cshtml.g.cs
 D:\Test\SiteFirst\SolutionSiteFirst\FirstSite\obj\Debug\net5.0\Razor\Views\Shared\Footer.cshtml.g.cs
+D:\Test\SiteFirst\SolutionSiteFirst\FirstSite\obj\Debug\net5.0\Razor\Views\Home\formexe.cshtml.g.cs
