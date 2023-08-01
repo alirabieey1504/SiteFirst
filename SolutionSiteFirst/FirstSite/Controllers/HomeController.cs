@@ -1,21 +1,24 @@
-﻿using System;
-using System.ComponentModel.DataAnnotations;
+﻿using System.Collections.Generic;
 using FirstSite.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
-using System.Text.Encodings.Web;
-using Microsoft.AspNetCore.Http;
 
 namespace FirstSite.Controllers
 {
     public class HomeController : Controller
     {
-       
 
-        public HomeController()
+        readonly private List<Service> _services = new List<Service>
         {
-            
-        }
+            new Service(1,"طلا"),
+            new Service(2,"پلاتین"),
+            new Service(3,"نقره"),
+            new Service(4,"الماس")
+           
+        };
+
+
+
         [HttpGet]
         public IActionResult formexe()
         {
