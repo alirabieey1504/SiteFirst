@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace FirstSite.Models
 {
@@ -18,6 +19,10 @@ namespace FirstSite.Models
         [Required(ErrorMessage = "لطفا ایمیل  را تصحیح وارد کنید")]
         [MaxLength(40, ErrorMessage = "بیش از حد کاراکتر وارد کردی !!")]
         [MinLength(3, ErrorMessage = "حداقل ورودی کاراکتر 3 میباشد")]
+        [EmailAddress(ErrorMessage = "ایمیل وارد شده صحیح نیست")]
         public string Email { get; set; }
+
+        public SelectList Wzfr { get; set; }
+        public int lista { get; set; }
     }
 }

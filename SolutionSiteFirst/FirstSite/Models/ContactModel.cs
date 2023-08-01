@@ -1,8 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using System.ComponentModel.DataAnnotations;
+using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace FirstSite.Models
 {
@@ -21,6 +18,10 @@ namespace FirstSite.Models
         public string Text { get; set; }
         [Required(ErrorMessage = "این فیلد اجباری است")]
 
-        public string Password { get; set; }    
+        public string Password { get; set; }
+
+        public SelectList Services { get; set; }
+
+        public int Service { get; set; }
     }
 }

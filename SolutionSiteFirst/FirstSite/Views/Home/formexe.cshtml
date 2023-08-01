@@ -27,7 +27,7 @@
 <body style="direction: rtl;" class="body">
 
 
-<form method="post" asp-action="formexe">
+<form method="post" asp-action="formexe" asp-controller="Home">
     @if (!string.IsNullOrWhiteSpace(ViewBag.success))
     {
         <div class="alert-success">
@@ -56,15 +56,10 @@
         <label asp-for="Email">ایمیل :</label>
         <input type="Email" asp-for="Email" style="margin-right: 50px;" placeholder="alirabieey@gmail.com"><br><br>
         <span asp-validation-for="Email" class="alert-danger"></span><br/>
-        <label for="tavalod">تولد :</label>
-        <select id="tavalod" style="margin-right: 55px;">
-            <option value="tehran">تهران</option>
-            <option value="arak">اراک</option>
-            <option value="mashhad">مشهد</option>
-            <option value="mazandaran">مازندران</option>
-            <option value="zabol">زابل</option>
-            <option value="rasht">رشت</option>
-            <option value="esfahan">اصفهان</option>
+        <label for="tavalod" >تولد :</label>
+        <select val asp-for="lista" asp-items="Model.Wzfr" style="margin-right: 55px;">
+            <option value="0">انتخاب کنید</option>
+           
 
 
         </select><br>
